@@ -9,7 +9,7 @@ System.out.println(array[0]);
 System.out.println(array[1]);
 System.out.println(array[2]);
         // Creating an Array (method 2) 
-        int[] array2 = { 98, 99, 100, 101 };
+        int array2[] = { 98, 99, 100, 101 };
         System.out.println("array2[0] = " + array2[0]);
     }
 }

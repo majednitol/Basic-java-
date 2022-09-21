@@ -9,6 +9,7 @@ public class InputFromUser {
             System.out.println(n1);
             String name = sc.next();
             System.out.println(name);
+            sc.nextLine();
             String sentence = sc.nextLine();
             System.out.println(sentence);
         }
