@@ -1,3 +1,4 @@
+package lab7;
 
 import java.util.Scanner;
 
@@ -30,9 +31,9 @@ class PhoneBook {
         return email;
     }
 
-    public static void search(PhoneBook ph[], String name) {
+    public static void search(PhoneBook ph[], String name, String phone, String email) {
         for (int i = 0; i < ph.length; i++) {
-            if (ph[i].name.equals(name)) {
+            if (ph[i].name.equals(name) && ph[i].phone.equals(phone) && ph[i].email.equals(email)) {
                 System.out.println("imformation  is found");
                 break;
 
@@ -42,6 +43,8 @@ class PhoneBook {
             }
         }
     }
+
+
 
     public static void displayRecord(PhoneBook ph[]) {
 
@@ -55,25 +58,26 @@ class PhoneBook {
 
 public class MyClass {
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        PhoneBook[] ph = new PhoneBook[n];
-        for (int i = 0; i < ph.length; i++) {
-            String sname = input.next();
-            String sphone = input.next();
-            String semail = input.next();
-            ph[i] = new PhoneBook();
-            ph[i].setName(sname);
-            ph[i].setPhone(sphone);
-            ph[i].setEmail(semail);
+   public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    PhoneBook[] ph = new PhoneBook[n];
+    for (int i = 0; i < ph.length; i++) {
+        String sname = input.next();
+        String sphone = input.next();
+        String semail = input.next();
+        ph[i] = new PhoneBook();
+        ph[i].setName(sname);
+        ph[i].setPhone(sphone);
+        ph[i].setEmail(semail);
 
-        }
-
-        PhoneBook.displayRecord(ph);
-        String name = input.next();
-
-        PhoneBook.search(ph, name);
     }
+
+    PhoneBook.displayRecord(ph);
+    String name = input.next();
+    String phone = input.next();
+    String email = input.next();
+    PhoneBook.search(ph, name, phone, email);
+   }
 
 }

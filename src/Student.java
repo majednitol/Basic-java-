@@ -101,7 +101,16 @@ class Student {
         this.id = id;
         this.cgpa = cgpa;
     }
+   static Scanner input = new Scanner(System.in);
+   public  static void insert(Student[] s ) {
+        for (int i = 0; i < s.length; i++) {
+            s[i] = new Student();
+            s[i].name = input.next();
+            s[i].id = input.nextInt();
+            s[i].cgpa = input.nextDouble();
 
+        }
+}
     void display() {
         System.out.println(name + ": " + id + ": " + cgpa);
     }
@@ -117,13 +126,7 @@ class Student {
         System.out.println("enter number of object");
         int n = input.nextInt();
         Student[] s = new Student[n];
-        for (int i = 0; i < n; i++) {
-            s[i] = new Student();
-            s[i].name = input.next();
-            s[i].id = input.nextInt();
-            s[i].cgpa = input.nextDouble();
-
-        }
+    insert(s);
 
         for (int i = 0; i < n; i++) {
             s[i].display();
