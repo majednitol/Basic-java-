@@ -8,7 +8,8 @@ public class Casting {
         // Explicit casting
         int Price = 100;
         float Gst = 18.0F;
-        int Totalprice = Price +(int)Gst;
+        int Totalprice = Price + (int) Gst;
+
         System.out.println(Totalprice);
 
     }
